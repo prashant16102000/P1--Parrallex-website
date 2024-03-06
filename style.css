@@ -24,11 +24,11 @@
 
 }
 .background{
-    transform:translateZ(-40px) scale(5); /* using the 3d transform property to set image far
+    transform:perspective translateZ(-40px) scale(5); /* using the 3d transform property to set image far
                                     we are using scale to increase the size of pitcure as it appears small on setting image far */
 }
 .foreground{
-    transform:translateZ(-20px) scale(3);
+    transform:perspective translateZ(-20px) scale(3);
 }
 
 /* styling the image to get the effect */
