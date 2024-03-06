@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*styling the wrapper super level */
+#wrapper{
+    height: 100vh; /* height of wrapper similary to view port */
+    overflow-x: hidden;  /* this we using to stopp our site from scrolling right side, as image is big it is scrolling*/
+    overflow-y: auto;  /*we required our site to scroll vertically */
+    perspective: 10 px; /* setting perspective to the images beacuse we will use 3D */
+
+}
+
+.container{
+    position: relative;
+    display: flex;  /* adding flex to container */
+    justify-content: center;
+    align-items:center;  /*using both to align item in the centre */
+    height: 100%;
+    transform-style: preserve-3d; /* using this to preseve 3d and tell we will use 3d , if not written this line it will take 2d transform only*/
+    
+    z-index:-1;  /* it is for overlaping it will help in which image to overlap on othe image */
+
+}
+.background{
+    transform:translateZ(-40px) scale(5); /* using the 3d transform property to set image far
+                                    we are using scale to increase the size of pitcure as it appears small on setting image far */
+}
+.foreground{
+    transform:translateZ(-20px) scale(3);
+}
+
+/* styling the image to get the effect */
+.background, .foreground{
+    position: absolute; /*for overlaping the image */
+    height: 100%;
+    width: 100%;
+    z-index:-1; /* this will tell the hedding to come on top of this over lapping images . */
+    object-fit: cover; /* it is use to fit item in container, image will cover all the width */
+}
+h1{
+    background-color: transparent;
+    
+}
