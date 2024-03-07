@@ -8,7 +8,7 @@
     height: 100vh; /* height of wrapper similary to view port */
     overflow-x: hidden;  /* this we using to stopp our site from scrolling right side, as image is big it is scrolling*/
     overflow-y: auto;  /*we required our site to scroll vertically */
-    perspective: 10 px; /* setting perspective to the images beacuse we will use 3D */
+    perspective: 15 px; /* setting perspective to the images beacuse we will use 3D */
 
 }
 
@@ -18,7 +18,7 @@
     justify-content: center;
     align-items:center;  /*using both to align item in the centre */
     height: 100%;
-    transform-style: preserve-3d; /* using this to preseve 3d and tell we will use 3d , if not written this line it will take 2d transform only*/
+    transform-style:preserve-3d; /* using this to preseve 3d and tell we will use 3d , if not written this line it will take 2d transform only*/
     
     z-index:-1;  /* it is for overlaping it will help in which image to overlap on othe image */
 
@@ -41,5 +41,66 @@
 }
 h1{
     background-color: transparent;
+    position: absolute;
+    top: 5rem;
+    left: 50%;
+    transform:translateX(-50%);
+    font-size: 10rem;
+    color: white;
+    text-shadow: 0 0 10 rgb(0,0,0,0.35 ); 
+
+    
+}section{
+    background-color: rgb(45, 45,45);
+    color: white;
+    padding: 5rem;
+
+}
+
+.SecHeading{
+    font-size: 5rem;
+    padding: 10rem;
+}
+.text{
+    font-size: 1.5rem;
+    
     
 }
+.bg{
+
+    position: relative;
+    width: 100%;
+    background-attachment: fixed; /* this property used to fix the image in background and dont scroll */
+    height: 350px;
+    background-position: center;
+    background-size: cover; /* to fit the image properly */
+     /*border-radius: 10px;   if we want to add rounded at the corder */
+}
+
+.desc{
+    position: absolute; /* beacuse we want our heading to over lap on image */
+    background-color: transparent;
+    top:50%;
+    left: 50%;
+    transform: translate(-50px,-50px); /*setting heading in proper place on above pictures */
+    font-size: 2.5rem;
+    font-weight: 600; /*thickness aand all of text */
+    text-shadow: 0 0 10 rgb(0,0,0,0.5 ); /* adding shadow to heading */
+
+
+}
+.bg1{
+
+    background-image: url(biking.jpg); /* another way to attach image in back ground */
+}
+
+.bg2{
+   
+        background-image: url(paragliding.jpg); /* another way to attach image in back ground */
+    
+}
+.bg3{
+
+    background-image: url(surfing.jpg); /* another way to attach image in back ground */
+}
+
